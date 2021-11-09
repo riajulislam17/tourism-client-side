@@ -51,7 +51,21 @@ const Details = () => {
 
                                 <h5 className="card-title"><span className="fw-bold">Location:</span> {blog.address}</h5>
                                 <p className="card-text"><span className="fw-bold">Description:</span> {blog.description}</p>
-                                <button onClick={joinBlog} className="btn btn-dark text-white fw-bold">JOIN</button>
+                                <form onSubmit={joinBlog} className="container w-50">
+                                    <div className="row my-2">
+                                        <div className="input-group">
+                                            <div className="input-group-text fw-bold"><i className="fas fa-user"></i></div>
+                                            <input type="text" className="form-control" id="autoSizingInputGroup" value={user.displayName || ''} />
+                                        </div>
+                                    </div>
+                                    <div className="row my-2">
+                                        <div className="input-group">
+                                            <div className="input-group-text fw-bold"><i className="fas fa-envelope"></i></div>
+                                            <input type="email" className="form-control" id="autoSizingInputGroup" value={user.email || ''} />
+                                        </div>
+                                    </div>
+                                    <button className="btn btn-dark p-2 fw-bold text-white">JOIN EVENT</button>
+                                </form>
                             </div>
                         </div>
                         <div className="col-md-4">

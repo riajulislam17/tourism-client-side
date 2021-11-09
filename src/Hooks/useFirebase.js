@@ -22,7 +22,7 @@ const useFirebase = () => {
       setIsLoading(false)
     })
     return () => unsubscribe()
-  })
+  }, []);
 
   const signInWithGoogle = () => {
     return signInWithPopup(auth, googleProvider)

@@ -15,7 +15,7 @@ import UpdateEvent from './Component/UpdateEvent/UpdateEvent';
 import Details from './Component/Details/Details';
 import ManageTask from './Component/ManageTask/ManageTask';
 
-function App() {
+function App () {
   return (
     <AuthProvider>
       <Router>
@@ -52,10 +52,10 @@ function App() {
             <Register></Register>
           </Route>
           <Route path="/*">
-          <NotFound></NotFound>
+            <NotFound></NotFound>
           </Route>
-          <Footer></Footer>
         </Switch>
+        <Footer></Footer>
       </Router>
     </AuthProvider>
   );

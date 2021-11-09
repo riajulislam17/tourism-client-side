@@ -10,7 +10,7 @@ const Blog = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setBlog(data));
-    });
+    }, []);
     return (
         <div className="container my-5 shadow p-3">
             <h1 className="text-center">OUR BLOGS</h1>
